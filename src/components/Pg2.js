@@ -9,7 +9,7 @@ function Indice(props) {
   
   return (
     <>
-      { !selected ?<div className="indice"> <p>Pergunta{props.indice} </p><  IoPlayOutline onClick={() => setSelected(true)} /></div>:<Pergunta indice={props.indice} pergunta={props.pergunta} reposta={props.reposta} />}
+      { !selected ?<div className="indice"> Pergunta{props.indice} <  IoPlayOutline onClick={() => setSelected(true)} /></div>:<Pergunta indice={props.indice} pergunta={props.pergunta} reposta={props.reposta} />}
     
     </>
   )
@@ -20,8 +20,8 @@ function Indice(props) {
 
 
 function Pg2() {
-  const lista = [{indice: "1", pergunta: "ola", reposta: "boa "},
-  {indice: "1", pergunta: "ola", reposta: "boa "}];
+  const lista = [{indice: "1", pergunta: "JSX é uma sintaxe para escrever HTML dentro do JS", reposta: "resposta certa "},
+  {indice: "2", pergunta: "ola", reposta: "boa "}, {indice: "2", pergunta: "ola", reposta: "boa "}];
   
    
   return (

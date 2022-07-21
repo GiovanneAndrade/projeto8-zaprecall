@@ -3,9 +3,9 @@ import App from './components/App';
 
 function Lista() {
     return (
-       <>
+       <div className="container">
           <App/>
-       </>
+       </div>
     );
 }
 

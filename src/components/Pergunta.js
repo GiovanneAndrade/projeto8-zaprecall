@@ -11,7 +11,7 @@ function Pergunta(props) {
   return (
   <>
      <>
-        {!selected ?<div className="pergunta"><p>{props.pergunta}</p> <IoPlayOutline onClick={() => setSelected(true)}/> </div>:<Resposta resposta={props.reposta}/>}
+        {!selected ?<div className="pergunta"><p>{props.pergunta}</p> <IoPlayOutline onClick={() => setSelected(true)}/> </div>:<Resposta indice={props.indice} pergunta={props.pergunta} reposta={props.reposta}/>}
       </>
       
   </>
