@@ -104,3 +104,27 @@ cursor: pointer;
   text-decoration: line-through;
   color:#D70900;
 }
+.btn-verde{
+  text-decoration: line-through;
+  color:#00d71d;
+}
+.task-container{
+  position: fixed;
+  bottom: 0;
+  width: 500px;
+  height: 200px;
+  background-color: #D70900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.indices{
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  gap:5px;
+  background-color: #2FBE34;
+}

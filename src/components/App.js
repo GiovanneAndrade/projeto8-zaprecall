@@ -13,6 +13,7 @@ function App() {
         <Route exact path="/" element={<Pg1/>}/>
         <Route path="/pag2" element={<Pg2/>}/>
     </Routes>
+    
     </BrowserRouter>
   
   
