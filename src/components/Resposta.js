@@ -3,6 +3,8 @@ import {IoCheckmarkCircleSharp, IoCloseCircle} from "react-icons/io5"
 import React, { useState } from "react"
 import Pergunta from "./Pergunta";
 import Pg2 from "./Pg2";
+import Footer from "./Footer";
+import {MdHelp} from "react-icons/md";
 
 
 function Resposta(props) {
@@ -16,9 +18,9 @@ function Resposta(props) {
   }
   function Foot (){
   if (props.iconeSelecionado.length ===  props.arrayLista && props.iconeSelecionado.includes("vermelho")){
-    return "não acertou"
+    return `Putz...  Ainda faltam alguns...Mas não desanime! `
   }if (props.iconeSelecionado.length ===  props.arrayLista && props.iconeSelecionado.includes("verde")){
-    return "parabens"
+    return "Parabéns! Você não esqueceu de nenhum flashcard!"
   }if (props.iconeSelecionado.length ===  props.arrayLista && props.iconeSelecionado.includes("amarelo")){
     return "parabens"
   }
@@ -30,7 +32,9 @@ function Resposta(props) {
     <>
      {selected ?(
       <>
+     
         <div className="pergunta">
+        <p className="resposta">{props.reposta}</p>
           <div className="escolha"> 
             <p className="escolha-vermelha" onClick={() => itemEscolhido('vermelho')}>Não lembrei</p>
             <p className="escolha-amarela" onClick={() => itemEscolhido('amarelo')}>Quase nâo lembrei</p>
@@ -47,22 +51,29 @@ function Resposta(props) {
       </div>
       
     }
-    <div className="indices">
-      {props.iconeSelecionado.map((icone)=>(
-        icone === 'vermelho' &&  <div className="verm"><IoCloseCircle/></div> 
-      ))}
-      {props.iconeSelecionado.map((icone)=>(
-        icone === 'amarelo' &&  <div className="ver"><IoCheckmarkCircleSharp/></div> 
-      ))}
-      {props.iconeSelecionado.map((icone)=>(
-        icone === 'verde' &&  <div className="amar"><IoCheckmarkCircleSharp/></div> 
-      ))}
-       {props.iconeSelecionado.length ===  props.arrayLista && <div className="btn-vermelha"> ola mundo  </div> }
+    <Footer>
+    
       
-      {Foot()}
-       
-        
-      </div>
+    <div className="indices">
+   
+   
+    <p className="p-resposta">{Foot()}</p>
+    <div className="icones-resposta ">
+      {props.iconeSelecionado.map((icone)=>(
+          icone === 'vermelho' &&   <  IoCloseCircle className="verm"/> 
+        ))}
+        {props.iconeSelecionado.map((icone)=>(
+          icone === 'amarelo' &&   <MdHelp className="amar"/> 
+        ))}
+        {props.iconeSelecionado.map((icone)=>(
+          icone === 'verde' &&    <IoCheckmarkCircleSharp className="ver"/> 
+        ))}
+    </div>
+     
+  
+    </div>
+   
+    </Footer>
     </>
   )
 }

@@ -19,7 +19,8 @@ function Pergunta(props) {
         reposta={props.reposta}
         iconeSelecionado={props.iconeSelecionado}
         setIconeSelecionado={props.setIconeSelecionado}
-        arrayLista={props.arrayLista}
+        arrayLista={props.arrayLista }
+        
         />)
     } 
   </>

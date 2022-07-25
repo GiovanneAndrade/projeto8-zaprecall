@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700;800;900&display=swap');
+
 body{
-  
+  font-family: 'Recursive', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: #E5E5E5;
 }
 .container{
   width: 375px;
@@ -11,7 +14,7 @@ body{
   background-color: #FB6B6B;
   display: flex;
   align-items: center;
-  justify-content: center;
+ 
   flex-direction: column;
 }
 .botao{
@@ -34,17 +37,34 @@ justify-content: center;
  border-radius: 5px;
  align-items: center;
  display: flex;
- justify-content: center;
+ justify-content:space-between;
+ margin-top: 25px;
+}
+.indice p{
+margin-left: 14px;
+
+}
+.p-resposta{
+  margin-bottom: 30px;
+  
+}
+.icon{
+  margin-right: 14px;
+  width: 25px;
+   height: 28px;
+
+ 
 }
 .pergunta{
    
   width: 300px;
-  height: 100px;
+  height: 131px;
   background-color: #ffffff;
   border: 1px solid #D70900;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
  border-radius: 5px;
-  
+  margin: 0;
+  padding: 0;
  display: flex;
 justify-content: center;
     flex-direction: column;  
@@ -53,6 +73,8 @@ justify-content: center;
   width: 100%;
 display: flex;
 gap: 7px;
+margin: 25px 15px 6px 15px;
+
 } 
 .escolha-vermelha{
   width: 85px;
@@ -64,8 +86,14 @@ align-items: center;
 color: #ffffff;
 justify-content: center;
 cursor: pointer;
+margin: 0;
+padding: 0;
+text-align: center;
+font-size: 12px;
 }
+
 .escolha-amarela{
+  font-size: 12px;
   width: 85px;
   height: 37px;
   background: #FF922E;
@@ -75,9 +103,12 @@ color: #ffffff;
 line-height: 14px;
 align-items: center;
 text-align: center;
+margin: 0;
+padding: 0;
 cursor: pointer;
 }
 .escolha-verde{
+  font-size: 12px;
   width: 85px;
   height: 37px;
   background: #2FBE34;
@@ -87,6 +118,8 @@ align-items: center;
 color: #ffffff;
 justify-content: center;
 cursor: pointer;
+margin: 0;
+padding: 0;
 }
 .indece-ver{
   width: 300px;
@@ -119,12 +152,80 @@ cursor: pointer;
   justify-content: center;
 }
 .indices{
-  width: 100%;
-
+  
   display: flex;
-  justify-content: center;
+  justify-content:space-between;
   position: fixed;
+  z-index: 100;
   bottom: 0;
   gap:5px;
-  background-color: #2FBE34;
+ flex-direction: column;
 }
+
+.footer{
+  position: fixed;
+  display: flex;
+width: 375px;
+height: 100px;
+bottom: 0;
+background: #FFFFFF;
+ 
+justify-content: center;
+box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+}
+.footer p{
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 25px;
+}
+.zaprecall-pg2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 48px 0 40px 0;
+}
+.zaprecall-pg2 img{
+  width: 52px;
+  height: 60px;
+  margin-right: 18px;
+}
+.zaprecall-pg2 h1{
+color: #ffffff;
+}
+.iniciar{
+  color: #D70900;
+  padding-left: 82px;
+  cursor: pointer;
+}
+.h1-pg1{
+color: #ffffff;
+}
+.img-pg1{
+  margin-top: 148px;
+}
+.resposta{
+  margin-bottom: 5px;
+  margin-left: 16px;
+}
+.verm{
+  color: #D70900;
+  width: 23px;
+height: 23px;
+
+}
+.amar{
+  color: #FF922E;
+  width: 23px;
+height: 23px;
+
+}
+.ver{
+  color: #00d71d;
+  width: 23px;
+height: 23px;
+
+}
+.icones-resposta{
+  display: flex;
+}
+

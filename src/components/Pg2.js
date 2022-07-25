@@ -1,6 +1,8 @@
 import {IoPlayOutline}   from "react-icons/io5";
 import React, { useState } from "react"
 import Pergunta from "./Pergunta";
+import Footer from "./Footer";
+import Image from "../image/image1.png";
 
 function Indice(props) {
   const [selected, setSelected] = useState(false) 
@@ -10,9 +12,9 @@ function Indice(props) {
       {!selected ? 
         (
         <div className="indice"> 
-          Pergunta {props.indice} <IoPlayOutline onClick={() => setSelected(true)} />
+          <p>Pergunta {props.indice}</p>  <IoPlayOutline className="icon" onClick={() => setSelected(true)} />
         </div>):
-        (<Pergunta indice={props.indice} pergunta={props.pergunta} reposta={props.reposta} iconeSelecionado={props.iconeSelecionado}  setIconeSelecionado={props.setIconeSelecionado} arrayLista={props.arrayLista}/>)
+        (<Pergunta indice={props.indice} pergunta={props.pergunta} reposta={props.reposta} iconeSelecionado={props.iconeSelecionado}  setIconeSelecionado={props.setIconeSelecionado} arrayLista={props.arrayLista} />)
       }
     </>
   )
@@ -27,8 +29,8 @@ function Pg2() {
   [
     {
     indice: "1", 
-    pergunta: "JSX é uma sintaxe para escrever HTML dentro do JS", 
-    reposta: " sim"
+    pergunta: "O que é JSX?", 
+    reposta: " JSX é uma sintaxe para escrever HTML dentro do JS"
     },
     {
     indice: "2", 
@@ -51,13 +53,19 @@ if (flashcardsSorteds.length===0){
   return<></>
 }else{
   let arrayLista = lista.length
+  let arrayIconeSelecionado=iconeSelecionado.length
   console.log(arrayLista)
   return (
     <>
+      <div className="zaprecall-pg2">
+      <img src={Image} />
+        <h1>ZapRecall</h1>
+       
+      </div>
       {flashcardsSorteds.map((item, index) =>(
-        <Indice key={index}   indice={item.indice} pergunta={item.pergunta} reposta={item.reposta} iconeSelecionado={iconeSelecionado} setIconeSelecionado={setIconeSelecionado} arrayLista={arrayLista}/>)
+        <Indice key={index}   indice={item.indice} pergunta={item.pergunta} reposta={item.reposta} iconeSelecionado={iconeSelecionado} setIconeSelecionado={setIconeSelecionado} arrayLista={arrayLista}  />)
       )}
-      <div>footer</div>
+      <Footer arrayLista={arrayLista} arrayIconeSelecionado={arrayIconeSelecionado} iconeSelecionado={iconeSelecionado}/>
     </>
   )
       }
