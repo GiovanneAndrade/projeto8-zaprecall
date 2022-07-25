@@ -61,23 +61,28 @@ cursor: pointer;
    
   width: 300px;
   height: 131px;
-  background-color: #ffffff;
+  background-color: #FFFFD5;
   border: 1px solid #D70900;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
  border-radius: 5px;
   margin: 0;
   padding: 0;
  display: flex;
-justify-content: center;
+ 
     flex-direction: column;  
 }
 .pergunta-texto{
  display: flex;
  align-items: center;
  justify-content:space-between;
+  
 }
 .pergunta-texto p{
   margin-left: 15px;
+  margin-bottom: 70px;
+}
+.pergunta-texto img{
+margin-top: 105px;
 }
 .icone-pergunta{
   margin-right: 15px;
