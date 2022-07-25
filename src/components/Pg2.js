@@ -12,7 +12,7 @@ function Indice(props) {
       {!selected ? 
         (
         <div className="indice"> 
-          <p>Pergunta {props.indice}</p>  <IoPlayOutline className="icon" onClick={() => setSelected(true)} />
+          <p >Pergunta {props.index+1}</p>  <IoPlayOutline className="icon" onClick={() => setSelected(true)} />
         </div>):
         (<Pergunta indice={props.indice} pergunta={props.pergunta} reposta={props.reposta} iconeSelecionado={props.iconeSelecionado}  setIconeSelecionado={props.setIconeSelecionado} arrayLista={props.arrayLista} />)
       }
@@ -28,22 +28,22 @@ function Pg2() {
   const lista = 
   [
     {
-    indice: "1", 
+    indice: "pergunta", 
     pergunta: "O que é JSX?", 
     reposta: " Uma extensão de linguagem do JavaScript"
     },
     {
-    indice: "2", 
+    indice: "pergunta", 
     pergunta: "O React é __ ",
      reposta: "uma biblioteca JavaScript para construção de interfaces"
     }, 
     {
-      indice: "3",
+      indice: "pergunta",
        pergunta: "Componentes devem iniciar com __ ", 
-       reposta: "giga "
+       reposta: "letra maiúscula "
     },
     {
-      indice: "4" ,
+      indice: "pergunta" ,
        pergunta: "Podemos colocar __ dentro do JSX ", 
        reposta: "expressões "
     },
@@ -70,7 +70,7 @@ if (flashcardsSorteds.length===0){
        
       </div>
       {flashcardsSorteds.map((item, index) =>(
-        <Indice key={index}   indice={item.indice} pergunta={item.pergunta} reposta={item.reposta} iconeSelecionado={iconeSelecionado} setIconeSelecionado={setIconeSelecionado} arrayLista={arrayLista}  />)
+        <Indice key={index}  index={index} indice={item.indice} pergunta={item.pergunta} reposta={item.reposta} iconeSelecionado={iconeSelecionado} setIconeSelecionado={setIconeSelecionado} arrayLista={arrayLista}  />)
       )}
       <Footer arrayLista={arrayLista} arrayIconeSelecionado={arrayIconeSelecionado} iconeSelecionado={iconeSelecionado}/>
     </>
