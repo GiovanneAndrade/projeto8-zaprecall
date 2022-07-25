@@ -30,18 +30,25 @@ function Pg2() {
     {
     indice: "1", 
     pergunta: "O que é JSX?", 
-    reposta: " JSX é uma sintaxe para escrever HTML dentro do JS"
+    reposta: " Uma extensão de linguagem do JavaScript"
     },
     {
     indice: "2", 
-    pergunta: "quem nasceu primeiro",
-     reposta: "a galinha "
+    pergunta: "O React é __ ",
+     reposta: "uma biblioteca JavaScript para construção de interfaces"
     }, 
     {
       indice: "3",
-       pergunta: "gatuni ou viroshe ?", 
+       pergunta: "Componentes devem iniciar com __ ", 
        reposta: "giga "
-    }
+    },
+    {
+      indice: "4" ,
+       pergunta: "Podemos colocar __ dentro do JSX ", 
+       reposta: "expressões "
+    },
+   
+   
   ];
   
 function Aleatorio (){

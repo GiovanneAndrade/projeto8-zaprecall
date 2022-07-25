@@ -54,7 +54,7 @@ margin-left: 14px;
   margin-right: 14px;
   width: 25px;
    height: 28px;
-
+cursor: pointer;
  
 }
 .pergunta{
@@ -219,7 +219,7 @@ min-height: 100px;
 max-height: 500px;
 bottom: 0;
 background: #FFFFFF;
- 
+
 justify-content: center;
 box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
 }
