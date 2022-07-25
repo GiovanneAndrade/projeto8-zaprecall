@@ -5,7 +5,7 @@ export default function Footer(props){
     {props.children}
     <div className="footer">
     
-       <p>{props.arrayIconeSelecionado}/{props.arrayLista}</p>
+       <p>{props.arrayIconeSelecionado}/{props.arrayLista} CONCLUÍDOS</p>
      
    
        </div> 
