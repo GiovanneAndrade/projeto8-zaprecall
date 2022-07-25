@@ -5,6 +5,9 @@ import Pergunta from "./Pergunta";
 import Pg2 from "./Pg2";
 import Footer from "./Footer";
 import {MdHelp} from "react-icons/md";
+import Image from "../image/vector.png";
+import party from "../image/party 2.png";
+import sad from "../image/sad 7.png";
 
 
 function Resposta(props) {
@@ -18,11 +21,14 @@ function Resposta(props) {
   }
   function Foot (){
   if (props.iconeSelecionado.length ===  props.arrayLista && props.iconeSelecionado.includes("vermelho")){
-    return `Putz...  Ainda faltam alguns...Mas não desanime! `
+    return   (<> <p className="p-foot"><img src={sad} /> <span> Putz...não desanime!</span></p>
+    </>)        
   }if (props.iconeSelecionado.length ===  props.arrayLista && props.iconeSelecionado.includes("verde")){
-    return "Parabéns! Você não esqueceu de nenhum flashcard!"
+    return (<> <p className="p-foot"><img src={party} /> <span> Parabéns...Acertou!</span></p>
+    </>)      
   }if (props.iconeSelecionado.length ===  props.arrayLista && props.iconeSelecionado.includes("amarelo")){
-    return "parabens"
+    return (<> <p className="p-foot"><img src={party} /> <span> Parabéns...Acertou!</span></p>
+    </>)    
   }
 }
   console.log(props.iconeSelecionado)
@@ -44,9 +50,9 @@ function Resposta(props) {
         </div> 
       </> ):
       <div className="indice">
-        {item === 'vermelho' && <div className="btn-vermelha"> pergunta {props.indice}<IoCloseCircle/></div> }
-        {item === 'amarelo' && <div className="btn-vermelha"> pergunta amarelo{props.indice}</div> }
-        {item === 'verde' && <div className="btn-verde"> pergunta verde {props.indice}<IoCheckmarkCircleSharp/></div> }
+        {item === 'vermelho' && <div className="btn-vermelha"> <p>pergunta  {props.indice}</p><IoCloseCircle className="indice-icone"/></div> }
+        {item === 'amarelo' && <div className="btn-amarelo"> <p>pergunta {props.indice}</p> <MdHelp className="indice-icone"/></div> }
+        {item === 'verde' && <div className="btn-verde"> <p>pergunta {props.indice} </p>  <IoCheckmarkCircleSharp className="indice-icone"/></div> }
        
       </div>
       

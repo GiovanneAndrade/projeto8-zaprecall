@@ -1,6 +1,7 @@
 import {GiReturnArrow} from "react-icons/gi"
 import React, { useState } from "react"
 import Resposta from "./Resposta";
+import Image from "../image/vector.png";
 
 function Pergunta(props) {
   
@@ -10,8 +11,12 @@ function Pergunta(props) {
   <>
     {!selected ? (
       <div className="pergunta">
-        <p>{props.pergunta}</p> 
-        <GiReturnArrow onClick={() => setSelected(true)}/> 
+        <div className="pergunta-texto">
+          <p>{props.pergunta}</p> 
+         
+          <img className="icone-pergunta" src={Image} onClick={() => setSelected(true)} />
+        </div>
+       
       </div>):
       (<Resposta 
         indice={props.indice} 

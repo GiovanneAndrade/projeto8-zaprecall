@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700;800;900&display=swap');
 
 body{
+  
   font-family: 'Recursive', sans-serif;
   display: flex;
   align-items: center;
@@ -10,7 +11,7 @@ body{
 }
 .container{
   width: 375px;
-  height: 667px;
+  height: 100vh;
   background-color: #FB6B6B;
   display: flex;
   align-items: center;
@@ -46,7 +47,8 @@ margin-left: 14px;
 }
 .p-resposta{
   margin-bottom: 30px;
-  
+  margin: 0;
+  padding: 0;
 }
 .icon{
   margin-right: 14px;
@@ -68,6 +70,18 @@ margin-left: 14px;
  display: flex;
 justify-content: center;
     flex-direction: column;  
+}
+.pergunta-texto{
+ display: flex;
+ align-items: center;
+ justify-content:space-between;
+}
+.pergunta-texto p{
+  margin-left: 15px;
+}
+.icone-pergunta{
+  margin-right: 15px;
+  cursor: pointer;
 }
  .escolha{
   width: 100%;
@@ -134,12 +148,46 @@ padding: 0;
  position:absolute;
 }
 .btn-vermelha{
+  width: 100%;
   text-decoration: line-through;
   color:#D70900;
+  margin-left: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-vermelha p{
+  margin-left: 0;
+}
+.btn-amarelo p{
+  margin-left: 0;
+}
+.btn-verde p{
+  margin-left: 0;
+}
+.indice-icone{
+  width: 23px;
+height: 23px;
+margin-right: 19px;
+}
+.btn-amarelo{
+  width: 100%;
+  text-decoration: line-through;
+  color:#FF922E;
+  margin-left: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
 }
 .btn-verde{
+  width: 100%;
   text-decoration: line-through;
   color:#00d71d;
+  margin-left: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .task-container{
   position: fixed;
@@ -152,7 +200,8 @@ padding: 0;
   justify-content: center;
 }
 .indices{
-  
+  min-height: 100px;
+max-height: 500px;
   display: flex;
   justify-content:space-between;
   position: fixed;
@@ -166,13 +215,15 @@ padding: 0;
   position: fixed;
   display: flex;
 width: 375px;
-height: 100px;
+min-height: 100px;
+max-height: 500px;
 bottom: 0;
 background: #FFFFFF;
  
 justify-content: center;
 box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
 }
+
 .footer p{
   position: fixed;
   bottom: 0;
@@ -227,5 +278,18 @@ height: 23px;
 }
 .icones-resposta{
   display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.p-foot{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+}
+@media (max-width: 500px) {
+   
 }
 
