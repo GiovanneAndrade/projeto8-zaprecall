@@ -1,11 +1,11 @@
-import {IoPlayOutline}   from "react-icons/io5";
+
 import {IoCheckmarkCircleSharp, IoCloseCircle} from "react-icons/io5"
 import React, { useState } from "react"
-import Pergunta from "./Pergunta";
-import Pg2 from "./Pg2";
+
+
 import Footer from "./Footer";
 import {MdHelp} from "react-icons/md";
-import Image from "../image/vector.png";
+
 import party from "../image/party 2.png";
 import sad from "../image/sad 7.png";
 
@@ -65,14 +65,14 @@ function Resposta(props) {
    
     <p className="p-resposta">{Foot()}</p>
     <div className="icones-resposta ">
-      {props.iconeSelecionado.map((icone)=>(
-          icone === 'vermelho' &&   <  IoCloseCircle className="verm"/> 
+      {props.iconeSelecionado.map((icone,index)=>(
+          icone === 'vermelho' &&   <  IoCloseCircle key={index}className="verm"/> 
         ))}
-        {props.iconeSelecionado.map((icone)=>(
-          icone === 'amarelo' &&   <MdHelp className="amar"/> 
+        {props.iconeSelecionado.map((icone, index)=>(
+          icone === 'amarelo' &&   <MdHelp key={index} className="amar"/> 
         ))}
-        {props.iconeSelecionado.map((icone)=>(
-          icone === 'verde' &&    <IoCheckmarkCircleSharp className="ver"/> 
+        {props.iconeSelecionado.map((icone, index)=>(
+          icone === 'verde' &&    <IoCheckmarkCircleSharp  key={index} className="ver"/> 
         ))}
     </div>
      

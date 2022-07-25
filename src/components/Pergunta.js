@@ -1,4 +1,4 @@
-import {GiReturnArrow} from "react-icons/gi"
+
 import React, { useState } from "react"
 import Resposta from "./Resposta";
 import Image from "../image/vector.png";
@@ -19,6 +19,7 @@ function Pergunta(props) {
        
       </div>):
       (<Resposta 
+        key={props.index}
         indice={props.indice} 
         pergunta={props.pergunta}
         reposta={props.reposta}

@@ -14,7 +14,7 @@ function Indice(props) {
         <div className="indice"> 
           <p >Pergunta {props.index+1}</p>  <IoPlayOutline className="icon" onClick={() => setSelected(true)} />
         </div>):
-        (<Pergunta indice={props.indice} pergunta={props.pergunta} reposta={props.reposta} iconeSelecionado={props.iconeSelecionado}  setIconeSelecionado={props.setIconeSelecionado} arrayLista={props.arrayLista} />)
+        (<Pergunta key={props.index} indice={props.indice} pergunta={props.pergunta} reposta={props.reposta} iconeSelecionado={props.iconeSelecionado}  setIconeSelecionado={props.setIconeSelecionado} arrayLista={props.arrayLista} />)
       }
     </>
   )
